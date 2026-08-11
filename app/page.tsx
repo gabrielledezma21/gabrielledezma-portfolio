@@ -44,7 +44,7 @@ export default function Home() {
 
       {/* Hero */}
       <section className="grid-bg relative overflow-hidden border-b border-line px-6 pb-20 pt-16 sm:pt-24">
-        <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1.1fr_1fr]">
+        <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1.1fr_1fr]">
           <div>
             <p className="mb-4 font-mono text-sm text-signal">
               200 OK · disponible para nuevas oportunidades

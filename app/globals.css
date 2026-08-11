@@ -33,9 +33,23 @@ body {
 }
 
 .grid-bg {
+  isolation: isolate;
+}
+
+.grid-bg::before {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  content: "";
+  pointer-events: none;
   background-image:
     linear-gradient(to right, #16191d 1px, transparent 1px),
     linear-gradient(to bottom, #16191d 1px, transparent 1px);
   background-size: 40px 40px;
   mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 100%);
+  -webkit-mask-image: radial-gradient(
+    ellipse 80% 60% at 50% 0%,
+    black 40%,
+    transparent 100%
+  );
 }
