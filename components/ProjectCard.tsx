@@ -46,17 +46,30 @@ export default function ProjectCard({ project }: { project: Project }) {
         ))}
       </div>
 
-      {project.repo && (
-        <a
-          href={project.repo}
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex items-center gap-1.5 font-mono text-sm text-signal transition-opacity hover:opacity-80"
-        >
-          Ver repositorio
-          <span aria-hidden>→</span>
-        </a>
-      )}
+      <div className="flex flex-wrap items-center gap-4">
+        {project.demo && (
+          <a
+            href={project.demo}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1.5 rounded bg-signal px-3 py-2 font-mono text-sm font-semibold text-bg transition-opacity hover:opacity-90"
+          >
+            Ver demo
+            <span aria-hidden>↗</span>
+          </a>
+        )}
+        {project.repo && (
+          <a
+            href={project.repo}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1.5 font-mono text-sm text-signal transition-opacity hover:opacity-80"
+          >
+            Ver código
+            <span aria-hidden>→</span>
+          </a>
+        )}
+      </div>
     </article>
   );
 }

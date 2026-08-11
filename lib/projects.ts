@@ -5,6 +5,7 @@ export type Project = {
   stack: string[];
   role: "Individual" | "En equipo";
   repo: string;
+  demo?: string;
   highlights: string[];
 };
 
@@ -17,6 +18,7 @@ export const projects: Project[] = [
     stack: ["Next.js 14", "Supabase", "Tailwind CSS"],
     role: "Individual",
     repo: "https://github.com/gabrielledezma21/sistema-turnos",
+    demo: "https://sistema-turnos-online.vercel.app/",
     highlights: [
       "Auth con Supabase y políticas RLS por rol",
       "Calendario propio con slots de disponibilidad dinámica",
