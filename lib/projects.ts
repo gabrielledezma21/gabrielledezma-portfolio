@@ -16,7 +16,7 @@ export const projects: Project[] = [
       "Plataforma full-stack de turnos con disponibilidad en tiempo real, reservas de invitado y panel de administración por roles.",
     stack: ["Next.js 14", "Supabase", "Tailwind CSS"],
     role: "Individual",
-    repo: "",
+    repo: "https://github.com/gabrielledezma21/sistema-turnos",
     highlights: [
       "Auth con Supabase y políticas RLS por rol",
       "Calendario propio con slots de disponibilidad dinámica",
