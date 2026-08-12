@@ -5,6 +5,7 @@ export type Project = {
   stack: string[];
   role: "Individual" | "En equipo";
   repo: string;
+  frontendRepo?: string;
   demo?: string;
   highlights: string[];
 };
@@ -61,15 +62,17 @@ export const projects: Project[] = [
     method: "PUT",
     name: "UnaHur Anti-Social Net",
     description:
-      "Backend de una red social: publicaciones con imágenes opcionales, comentarios con visibilidad configurable por antigüedad, y etiquetas.",
-    stack: ["Node.js", "MongoDB", "Swagger"],
+      "Red social full-stack con publicaciones, imágenes persistentes, comentarios y etiquetas. El proyecto académico estuvo enfocado principalmente en el diseño y desarrollo del backend.",
+    stack: ["Node.js", "Express", "MongoDB Atlas", "React", "Vite", "Vercel"],
     role: "En equipo",
     repo: "https://github.com/gabrielledezma21/anti-social-mongo-4-bits",
+    frontendRepo: "https://github.com/gabrielledezma21/red-social-frontend",
+    demo: "https://red-social-frontend-lake.vercel.app/",
     highlights: [
-      "Modelado documental de posts, comentarios, tags e imágenes",
-      "Reglas de negocio configurables vía variables de entorno",
-      "CRUD completo con validaciones de integridad referencial",
-      "Documentación de la API en formato Swagger/YAML",
+      "CRUD completo de usuarios, posts, comentarios, tags e imágenes",
+      "Relaciones bidireccionales con validaciones de integridad referencial",
+      "Imágenes persistentes almacenadas en MongoDB y servidas por la API",
+      "Backend serverless y frontend React desplegados en Vercel",
     ],
   },
 ];
