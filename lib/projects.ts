@@ -31,9 +31,10 @@ export const projects: Project[] = [
     name: "MedIntegral — Backend",
     description:
       "API REST para una plataforma médica integral: gestión de afiliados, prestadores y agendas de turnos, con reportes de situación terapéutica.",
-    stack: ["Node.js", "Express", "PostgreSQL", "Sequelize", "Docker"],
+    stack: ["Node.js", "Express", "MongoDB", "React", "Vite"],
     role: "En equipo",
-    repo: "https://github.com/DesApp-2025c2-Grupo3/MedIntegral-backend",
+    repo: "https://github.com/gabrielledezma21/obra-social",
+    demo: "https://obra-social-frontend.vercel.app/",
     highlights: [
       "Modelado relacional de afiliados, prestadores y agendas",
       "Migraciones y seeders con Sequelize CLI",
