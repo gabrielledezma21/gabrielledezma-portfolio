@@ -65,7 +65,18 @@ export default function ProjectCard({ project }: { project: Project }) {
             rel="noreferrer"
             className="inline-flex items-center gap-1.5 font-mono text-sm text-signal transition-opacity hover:opacity-80"
           >
-            Ver código
+            Backend
+            <span aria-hidden>→</span>
+          </a>
+        )}
+        {project.frontendRepo && (
+          <a
+            href={project.frontendRepo}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1.5 font-mono text-sm text-signal transition-opacity hover:opacity-80"
+          >
+            Frontend
             <span aria-hidden>→</span>
           </a>
         )}
