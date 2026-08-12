@@ -36,10 +36,10 @@ export const projects: Project[] = [
     repo: "https://github.com/gabrielledezma21/obra-social",
     demo: "https://obra-social-frontend.vercel.app/",
     highlights: [
-      "Modelado relacional de afiliados, prestadores y agendas",
-      "Migraciones y seeders con Sequelize CLI",
-      "Entorno containerizado con Docker Compose",
-      "Documentación de endpoints con Swagger",
+      "Modelado documental de afiliados, prestadores y agendas",
+      "API Express adaptada a funciones serverless",
+      "MongoDB Atlas con datos demostrativos persistentes",
+      "Frontend React y documentación Swagger desplegados",
     ],
   },
   {
