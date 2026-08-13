@@ -21,6 +21,9 @@ const STACK = {
     "Next.js",
     "Vite",
     "Tailwind CSS",
+    "Material UI",
+    "Bootstrap",
+    "Thymeleaf",
   ],
   "Bases de datos": [
     "MongoDB Atlas",
@@ -45,6 +48,7 @@ const STACK = {
     "Serverless Functions",
     "AWS",
     "Azure",
+    "OCI",
   ],
 };
 
@@ -98,7 +102,7 @@ export default function Home() {
               <span className="text-ink">Java, Spring Boot, Node.js y APIs REST</span>.
               Convierto proyectos en aplicaciones desplegadas: diseño el modelo,
               construyo la API y también puedo desarrollar o integrar la interfaz con
-              HTML, CSS, JavaScript, React y Next.js.
+              HTML, CSS, JavaScript, React, Next.js, Material UI y Bootstrap.
             </p>
             <div className="mt-6 flex flex-wrap gap-2 font-mono text-xs text-ink-muted">
               <span className="rounded-full border border-line bg-bg-surface px-3 py-1.5">4 proyectos destacados</span>
@@ -233,7 +237,8 @@ export default function Home() {
             capas —rutas, validaciones, relaciones y persistencia— y convertirlas en
             soluciones comprobables. Trabajo principalmente con Java/Spring Boot y
             Node.js/Express. También desarrollo interfaces con HTML, CSS, JavaScript,
-            React y Next.js; no es mi especialidad principal, pero sí una capacidad
+            React, Next.js y Thymeleaf, usando Material UI, Bootstrap o Tailwind CSS
+            según el proyecto; no es mi especialidad principal, pero sí una capacidad
             que uso para integrar, probar y entregar productos completos. Busco una
             oportunidad para crecer como Backend Developer
             y aportar esta mirada práctica desde el primer día.
