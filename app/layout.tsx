@@ -15,9 +15,26 @@ const sans = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Gabriel Ledezma — Backend Developer",
+  title: "Gabriel Ledezma — Backend Developer | Java & Node.js",
   description:
-    "Portfolio de Gabriel Agustín Ledezma, desarrollador backend especializado en Java, Spring Boot y Node.js.",
+    "Portfolio de Gabriel Agustín Ledezma: APIs REST, Java, Spring Boot, Node.js, bases de datos y proyectos full-stack desplegados.",
+  keywords: [
+    "Backend Developer",
+    "Java",
+    "Spring Boot",
+    "Node.js",
+    "Express",
+    "MongoDB",
+    "PostgreSQL",
+    "UNAHUR",
+  ],
+  authors: [{ name: "Gabriel Agustín Ledezma" }],
+  openGraph: {
+    title: "Gabriel Ledezma — Backend Developer",
+    description: "APIs REST, modelos de datos y proyectos desplegados de extremo a extremo.",
+    type: "website",
+    locale: "es_AR",
+  },
 };
 
 export default function RootLayout({
