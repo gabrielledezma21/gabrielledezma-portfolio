@@ -35,12 +35,13 @@ export const projects: Project[] = [
     stack: ["Node.js", "Express", "MongoDB", "React", "Vite"],
     role: "En equipo",
     repo: "https://github.com/gabrielledezma21/obra-social",
+    frontendRepo: "https://github.com/gabrielledezma21/obra-social-frontend",
     demo: "https://obra-social-frontend.vercel.app/",
     highlights: [
-      "Modelado documental de afiliados, prestadores y agendas",
+      "CRUD y relaciones de afiliados, prestadores, centros y agendas",
       "API Express adaptada a funciones serverless",
       "MongoDB Atlas con datos demostrativos persistentes",
-      "Frontend React y documentación Swagger desplegados",
+      "Contratos frontend–backend auditados y aplicación desplegada en Vercel",
     ],
   },
   {
@@ -69,10 +70,10 @@ export const projects: Project[] = [
     frontendRepo: "https://github.com/gabrielledezma21/red-social-frontend",
     demo: "https://red-social-frontend-lake.vercel.app/",
     highlights: [
-      "CRUD completo de usuarios, posts, comentarios, tags e imágenes",
+      "CRUD completo de usuarios, publicaciones, comentarios, tags e imágenes",
       "Relaciones bidireccionales con validaciones de integridad referencial",
       "Imágenes persistentes almacenadas en MongoDB y servidas por la API",
-      "Backend serverless y frontend React desplegados en Vercel",
+      "Flujos críticos verificados de extremo a extremo en producción",
     ],
   },
 ];
