@@ -17,13 +17,16 @@ const sans = Inter({
 export const metadata: Metadata = {
   title: "Gabriel Ledezma — Backend Developer | Java & Node.js",
   description:
-    "Portfolio de Gabriel Agustín Ledezma: APIs REST, Java, Spring Boot, Node.js, bases de datos y proyectos full-stack desplegados.",
+    "Portfolio de Gabriel Agustín Ledezma: backend con Java, Spring Boot y Node.js; frontend con JavaScript y React; bases de datos y proyectos desplegados.",
   keywords: [
     "Backend Developer",
     "Java",
     "Spring Boot",
     "Node.js",
     "Express",
+    "JavaScript",
+    "React",
+    "Next.js",
     "MongoDB",
     "PostgreSQL",
     "UNAHUR",
