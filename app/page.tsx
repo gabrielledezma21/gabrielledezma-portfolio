@@ -10,6 +10,7 @@ const STACK = {
 
 const NAV = [
   { href: "#proyectos", label: "Proyectos" },
+  { href: "#experiencia", label: "Experiencia" },
   { href: "#stack", label: "Stack" },
   { href: "#sobre-mi", label: "Sobre mí" },
   { href: "#contacto", label: "Contacto" },
@@ -53,11 +54,16 @@ export default function Home() {
               Gabriel Ledezma
             </h1>
             <p className="mt-4 max-w-lg text-lg leading-relaxed text-ink-muted">
-              Backend Developer Jr especializado en{" "}
-              <span className="text-ink">Java, Spring Boot y Node.js</span>. Construyo
-              APIs REST, arquitecturas backend y modelos de datos que sostienen
-              productos reales.
+              Backend Developer especializado en{" "}
+              <span className="text-ink">Java, Spring Boot, Node.js y APIs REST</span>.
+              Convierto proyectos en aplicaciones desplegadas: diseño el modelo,
+              conecto frontend y backend, y verifico CRUD, relaciones y persistencia.
             </p>
+            <div className="mt-6 flex flex-wrap gap-2 font-mono text-xs text-ink-muted">
+              <span className="rounded-full border border-line bg-bg-surface px-3 py-1.5">4 proyectos destacados</span>
+              <span className="rounded-full border border-line bg-bg-surface px-3 py-1.5">3 demos públicas</span>
+              <span className="rounded-full border border-line bg-bg-surface px-3 py-1.5">Backend · datos · despliegue</span>
+            </div>
             <div className="mt-8 flex flex-wrap gap-4">
               <a
                 href="#proyectos"
@@ -97,6 +103,47 @@ export default function Home() {
         </div>
       </section>
 
+
+      {/* Experiencia aplicada */}
+      <section id="experiencia" className="border-b border-line px-6 py-20">
+        <div className="mx-auto max-w-6xl">
+          <p className="mb-2 font-mono text-sm text-signal">/experiencia-aplicada</p>
+          <h2 className="mb-4 text-3xl font-bold text-ink sm:text-4xl">
+            Del modelo de datos a producción
+          </h2>
+          <p className="mb-10 max-w-3xl text-lg leading-relaxed text-ink-muted">
+            Mi foco está en el backend, pero trabajo sobre el flujo completo para que
+            una API no quede aislada: contrato, interfaz, datos y despliegue tienen que
+            funcionar juntos.
+          </p>
+          <div className="grid gap-5 md:grid-cols-3">
+            {[
+              {
+                code: "01",
+                title: "Diseño y contratos",
+                text: "Modelado de entidades y relaciones, endpoints REST, validaciones e integridad referencial.",
+              },
+              {
+                code: "02",
+                title: "Persistencia real",
+                text: "MongoDB Atlas, PostgreSQL, migraciones, datos relacionados y comportamiento consistente del CRUD.",
+              },
+              {
+                code: "03",
+                title: "Entrega verificable",
+                text: "Integración con frontends React/Next.js, adaptación serverless, despliegues en Vercel y pruebas end-to-end.",
+              },
+            ].map((item) => (
+              <article key={item.code} className="rounded-lg border border-line bg-bg-surface p-6">
+                <span className="font-mono text-xs text-signal">{item.code}</span>
+                <h3 className="mt-3 text-lg font-semibold text-ink">{item.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-ink-muted">{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Stack */}
       <section id="stack" className="border-b border-line px-6 py-20">
         <div className="mx-auto max-w-6xl">
@@ -129,11 +176,13 @@ export default function Home() {
           <p className="mb-2 font-mono text-sm text-signal">/sobre-mi</p>
           <h2 className="mb-6 text-3xl font-bold text-ink sm:text-4xl">Sobre mí</h2>
           <p className="text-lg leading-relaxed text-ink-muted">
-            Técnico Universitario en Programación y estudiante de la Licenciatura en
-            Informática (UNAHUR). Me enfoco en arquitectura backend, diseño de APIs
-            REST, testing y contenedores. Actualmente profundizando en Spring Boot,
-            Docker y buenas prácticas de arquitectura, mientras busco mi primera
-            oportunidad como Backend Developer.
+            Soy Técnico Universitario en Programación y estudiante de la Licenciatura
+            en Informática en la UNAHUR. Disfruto encontrar fallas que cruzan varias
+            capas —rutas, validaciones, relaciones y persistencia— y convertirlas en
+            soluciones comprobables. Trabajo principalmente con Java/Spring Boot y
+            Node.js/Express, sin perder de vista la integración con el producto que
+            consume la API. Busco una oportunidad para crecer como Backend Developer
+            y aportar esta mirada práctica desde el primer día.
           </p>
         </div>
       </section>
