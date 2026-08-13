@@ -3,9 +3,49 @@ import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/lib/projects";
 
 const STACK = {
-  Backend: ["Java", "Spring Boot", "Spring Security", "Node.js", "Express.js", "Python"],
-  "Bases de datos": ["PostgreSQL", "MySQL", "MongoDB", "SQLite"],
-  Herramientas: ["Docker", "Git", "Maven", "Swagger", "Postman", "AWS", "Azure"],
+  "Backend · foco principal": [
+    "Java",
+    "Spring Boot",
+    "Spring Security",
+    "Node.js",
+    "Express.js",
+    "Python",
+    "APIs REST",
+    "JWT",
+  ],
+  Frontend: [
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "React",
+    "Next.js",
+    "Vite",
+    "Tailwind CSS",
+  ],
+  "Bases de datos": [
+    "MongoDB Atlas",
+    "PostgreSQL",
+    "MySQL",
+    "SQLite",
+    "Supabase",
+    "Flyway",
+  ],
+  "Calidad y documentación": [
+    "Swagger / OpenAPI",
+    "Postman",
+    "Validación de APIs",
+    "Pruebas end-to-end",
+    "Git",
+    "GitHub",
+    "Maven",
+  ],
+  "Infraestructura y cloud": [
+    "Docker",
+    "Vercel",
+    "Serverless Functions",
+    "AWS",
+    "Azure",
+  ],
 };
 
 const NAV = [
@@ -57,12 +97,13 @@ export default function Home() {
               Backend Developer especializado en{" "}
               <span className="text-ink">Java, Spring Boot, Node.js y APIs REST</span>.
               Convierto proyectos en aplicaciones desplegadas: diseño el modelo,
-              conecto frontend y backend, y verifico CRUD, relaciones y persistencia.
+              construyo la API y también puedo desarrollar o integrar la interfaz con
+              HTML, CSS, JavaScript, React y Next.js.
             </p>
             <div className="mt-6 flex flex-wrap gap-2 font-mono text-xs text-ink-muted">
               <span className="rounded-full border border-line bg-bg-surface px-3 py-1.5">4 proyectos destacados</span>
               <span className="rounded-full border border-line bg-bg-surface px-3 py-1.5">3 demos públicas</span>
-              <span className="rounded-full border border-line bg-bg-surface px-3 py-1.5">Backend · datos · despliegue</span>
+              <span className="rounded-full border border-line bg-bg-surface px-3 py-1.5">Backend como foco · frontend como complemento</span>
             </div>
             <div className="mt-8 flex flex-wrap gap-4">
               <a
@@ -131,7 +172,7 @@ export default function Home() {
               {
                 code: "03",
                 title: "Entrega verificable",
-                text: "Integración con frontends React/Next.js, adaptación serverless, despliegues en Vercel y pruebas end-to-end.",
+                text: "Interfaces con HTML, CSS, JavaScript y React/Next.js; integración con APIs, adaptación serverless, Vercel y pruebas end-to-end.",
               },
             ].map((item) => (
               <article key={item.code} className="rounded-lg border border-line bg-bg-surface p-6">
@@ -148,23 +189,34 @@ export default function Home() {
       <section id="stack" className="border-b border-line px-6 py-20">
         <div className="mx-auto max-w-6xl">
           <p className="mb-2 font-mono text-sm text-signal">/stack</p>
-          <h2 className="mb-12 text-3xl font-bold text-ink sm:text-4xl">
-            Tecnologías
+          <h2 className="text-3xl font-bold text-ink sm:text-4xl">
+            Stack técnico
           </h2>
-          <div className="grid gap-10 sm:grid-cols-3">
+          <p className="mb-12 mt-4 max-w-3xl text-lg leading-relaxed text-ink-muted">
+            Mi especialidad es el backend. El conocimiento de frontend me permite
+            construir productos completos, integrar APIs con criterio y diagnosticar
+            problemas a través de toda la aplicación.
+          </p>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {Object.entries(STACK).map(([category, items]) => (
-              <div key={category}>
-                <h3 className="mb-4 font-mono text-sm font-semibold text-ink-muted">
+              <article
+                key={category}
+                className="rounded-lg border border-line bg-bg-surface p-6"
+              >
+                <h3 className="mb-5 font-mono text-sm font-semibold text-signal">
                   {category}
                 </h3>
-                <ul className="space-y-2">
+                <ul className="flex flex-wrap gap-2">
                   {items.map((item) => (
-                    <li key={item} className="text-ink">
+                    <li
+                      key={item}
+                      className="rounded border border-line bg-bg-raised px-2.5 py-1.5 font-mono text-xs text-ink"
+                    >
                       {item}
                     </li>
                   ))}
                 </ul>
-              </div>
+              </article>
             ))}
           </div>
         </div>
@@ -180,8 +232,10 @@ export default function Home() {
             en Informática en la UNAHUR. Disfruto encontrar fallas que cruzan varias
             capas —rutas, validaciones, relaciones y persistencia— y convertirlas en
             soluciones comprobables. Trabajo principalmente con Java/Spring Boot y
-            Node.js/Express, sin perder de vista la integración con el producto que
-            consume la API. Busco una oportunidad para crecer como Backend Developer
+            Node.js/Express. También desarrollo interfaces con HTML, CSS, JavaScript,
+            React y Next.js; no es mi especialidad principal, pero sí una capacidad
+            que uso para integrar, probar y entregar productos completos. Busco una
+            oportunidad para crecer como Backend Developer
             y aportar esta mirada práctica desde el primer día.
           </p>
         </div>
