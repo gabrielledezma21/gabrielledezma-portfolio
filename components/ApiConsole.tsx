@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 type Call = {
-  method: "GET" | "POST" | "PUT" | "DELETE";
+  method: "GET" | "POST" | "PUT" | "PATCH" | "DELETE";
   path: string;
   project: string;
   status: number;
@@ -13,15 +13,29 @@ type Call = {
 const CALLS: Call[] = [
   {
     method: "POST",
-    path: "/login",
-    project: "foro-hub-api",
+    path: "/api/auth/login",
+    project: "rectificadora-backend",
     status: 200,
     body: '{ "token": "eyJhbGciOi..." }',
   },
   {
     method: "GET",
+    path: "/api/workshop/orders",
+    project: "rectificadora-backend",
+    status: 200,
+    body: '[ { "order": 1042, "status": "EN_PROCESO" } ]',
+  },
+  {
+    method: "PATCH",
+    path: "/api/workshop/tasks/:id/start",
+    project: "rectificadora-backend",
+    status: 200,
+    body: '{ "status": "EN_PROCESO" }',
+  },
+  {
+    method: "GET",
     path: "/api/prestadores",
-    project: "medintegral-backend",
+    project: "medintegral",
     status: 200,
     body: '[ { "id": 12, "especialidad": "clinica" } ]',
   },
@@ -33,24 +47,11 @@ const CALLS: Call[] = [
     body: '{ "id": "665f...", "tags": ["backend"] }',
   },
   {
-    method: "PUT",
-    path: "/api/afiliados/:id/datos-personales",
-    project: "medintegral-backend",
-    status: 200,
-    body: '{ "updated": true }',
-  },
-  {
     method: "GET",
     path: "/topicos?page=0",
     project: "foro-hub-api",
     status: 200,
     body: '{ "content": [...], "totalPages": 3 }',
-  },
-  {
-    method: "DELETE",
-    path: "/api/agenda-turnos/:id",
-    project: "medintegral-backend",
-    status: 204,
   },
 ];
 
@@ -58,6 +59,7 @@ const METHOD_STYLES: Record<Call["method"], string> = {
   GET: "text-method-get border-method-get/40 bg-method-get/10",
   POST: "text-method-post border-method-post/40 bg-method-post/10",
   PUT: "text-method-put border-method-put/40 bg-method-put/10",
+  PATCH: "text-method-put border-method-put/40 bg-method-put/10",
   DELETE: "text-method-delete border-method-delete/40 bg-method-delete/10",
 };
 
@@ -67,14 +69,14 @@ export default function ApiConsole() {
 
   useEffect(() => {
     setVisible([]);
-    let i = 0;
+    let index = 0;
     const step = () => {
-      i += 1;
-      setVisible((prev) => [...prev, i - 1]);
-      if (i < CALLS.length) {
+      index += 1;
+      setVisible((previous) => [...previous, index - 1]);
+      if (index < CALLS.length) {
         timeout = setTimeout(step, 900);
       } else {
-        timeout = setTimeout(() => setCycle((c) => c + 1), 3200);
+        timeout = setTimeout(() => setCycle((current) => current + 1), 3200);
       }
     };
     let timeout = setTimeout(step, 500);
@@ -92,10 +94,10 @@ export default function ApiConsole() {
         </span>
       </div>
       <div className="h-[280px] overflow-hidden px-4 py-4 font-mono text-[13px] leading-relaxed sm:text-sm">
-        {CALLS.map((call, idx) => (
+        {CALLS.map((call, index) => (
           <div
-            key={`${cycle}-${idx}`}
-            className={`mb-3 ${visible.includes(idx) ? "animate-fadeUp" : "opacity-0"}`}
+            key={`${cycle}-${index}`}
+            className={`mb-3 ${visible.includes(index) ? "animate-fadeUp" : "opacity-0"}`}
           >
             <div className="flex flex-wrap items-center gap-2">
               <span
@@ -106,12 +108,11 @@ export default function ApiConsole() {
               <span className="text-ink">{call.path}</span>
               <span className="text-ink-faint">// {call.project}</span>
             </div>
-            {call.body && (
+            {call.body ? (
               <div className="mt-1 pl-1 text-ink-muted">
                 <span className="text-signal">{call.status}</span> {call.body}
               </div>
-            )}
-            {!call.body && (
+            ) : (
               <div className="mt-1 pl-1 text-ink-muted">
                 <span className="text-signal">{call.status}</span> no content
               </div>
