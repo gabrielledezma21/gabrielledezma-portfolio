@@ -27,6 +27,7 @@ export const projects: Project[] = [
     role: "Individual",
     repo: "https://github.com/gabrielledezma21/rectificadora-backend",
     frontendRepo: "https://github.com/gabrielledezma21/rectificadora-frontend",
+    demo: "https://rectificadora-frontend-gabrielledezma21s-projects.vercel.app/",
     highlights: [
       "JWT, BCrypt y permisos granulares para administración, operadores y empleados",
       "Flujo controlado de órdenes y tareas con historial y una única tarea activa por empleado",
