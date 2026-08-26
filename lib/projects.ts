@@ -13,21 +13,6 @@ export type Project = {
 export const projects: Project[] = [
   {
     method: "POST",
-    name: "Foro Hub API",
-    description:
-      "API REST para una plataforma educativa donde usuarios pueden crear y gestionar tópicos de discusión. Proyecto desarrollado aplicando arquitectura por capas y buenas prácticas de backend.",
-    stack: ["Java 21", "Spring Boot", "Spring Security", "JWT", "PostgreSQL", "Flyway"],
-    role: "Individual",
-    repo: "https://github.com/gabrielledezma21/foro",
-    highlights: [
-      "Autenticación JWT y manejo seguro de contraseñas con BCrypt",
-      "Separación de responsabilidades mediante Controller, Service y Repository",
-      "Persistencia relacional con migraciones versionadas",
-      "Documentación de endpoints mediante Swagger/OpenAPI",
-    ],
-  },
-  {
-    method: "POST",
     name: "Rectificadora - Sistema de gestión",
     description:
       "Sistema empresarial para digitalizar la gestión de órdenes de trabajo de un taller mecánico, incluyendo clientes, tareas, usuarios y seguimiento operativo.",
@@ -73,6 +58,21 @@ export const projects: Project[] = [
       "Integración frontend-backend mediante APIs REST",
       "Persistencia de información en MongoDB Atlas",
       "Resolución de problemas de integridad y validaciones de negocio",
+    ],
+  },
+  {
+    method: "POST",
+    name: "Foro Hub API",
+    description:
+      "API REST para una plataforma educativa donde usuarios pueden crear y gestionar tópicos de discusión. Proyecto desarrollado aplicando arquitectura por capas y buenas prácticas de backend.",
+    stack: ["Java 21", "Spring Boot", "Spring Security", "JWT", "PostgreSQL", "Flyway"],
+    role: "Individual",
+    repo: "https://github.com/gabrielledezma21/foro",
+    highlights: [
+      "Autenticación JWT y manejo seguro de contraseñas con BCrypt",
+      "Separación de responsabilidades mediante Controller, Service y Repository",
+      "Persistencia relacional con migraciones versionadas",
+      "Documentación de endpoints mediante Swagger/OpenAPI",
     ],
   },
 ];
