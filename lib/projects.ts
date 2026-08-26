@@ -61,6 +61,23 @@ export const projects: Project[] = [
     ],
   },
   {
+    method: "PUT",
+    name: "UnaHur Anti-Social Net",
+    description:
+      "Red social full-stack desarrollada en equipo con publicaciones, imágenes persistentes, comentarios y etiquetas, con foco principal en el diseño e implementación del backend.",
+    stack: ["Node.js", "Express", "MongoDB Atlas", "React", "Vite", "Vercel"],
+    role: "En equipo",
+    repo: "https://github.com/gabrielledezma21/anti-social-mongo-4-bits",
+    frontendRepo: "https://github.com/gabrielledezma21/red-social-frontend",
+    demo: "https://red-social-frontend-lake.vercel.app/",
+    highlights: [
+      "CRUD completo de usuarios, publicaciones, comentarios, etiquetas e imágenes",
+      "Relaciones bidireccionales con validaciones de integridad referencial",
+      "Persistencia de imágenes en MongoDB y exposición mediante la API",
+      "Trabajo colaborativo e integración frontend-backend desplegada en producción",
+    ],
+  },
+  {
     method: "POST",
     name: "Foro Hub API",
     description:
