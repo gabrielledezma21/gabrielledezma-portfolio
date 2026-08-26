@@ -97,14 +97,16 @@ export const projects: Project[] = [
       "JWT",
       "PostgreSQL",
       "Flyway",
+      "Railway",
     ],
     role: "Individual",
     repo: "https://github.com/gabrielledezma21/foro",
+    demo: "https://foro-api-production.up.railway.app/swagger-ui/index.html",
     highlights: [
       "Autenticación JWT y manejo seguro de contraseñas con BCrypt",
       "Separación de responsabilidades mediante Controller, Service y Repository",
-      "Persistencia relacional con migraciones versionadas",
-      "Documentación de endpoints mediante Swagger/OpenAPI",
+      "PostgreSQL persistente con 8 migraciones Flyway aplicadas en producción",
+      "Swagger/OpenAPI público y despliegue reproducible con Docker en Railway",
     ],
   },
 ];
